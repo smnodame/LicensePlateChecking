@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#F0F0F0"
+                >
+
+                <TextView
+                    android:id="@+id/result1"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result17"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/result2"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result18"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#F0F0F0"
+                >
+
+                <TextView
+                    android:id="@+id/result3"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result19"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/result4"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:textColor="#000"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result20"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#F0F0F0"
+                >
+
+                <TextView
+                    android:id="@+id/result5"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result21"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/result6"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result22"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#F0F0F0"
+                >
+
+                <TextView
+                    android:id="@+id/result7"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result23"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/result8"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result24"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#F0F0F0"
+                >
+
+                <TextView
+                    android:id="@+id/result9"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result25"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/result10"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result26"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#F0F0F0"
+                >
+
+                <TextView
+                    android:id="@+id/result11"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result27"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/result12"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result28"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#F0F0F0"
+                >
+
+                <TextView
+                    android:id="@+id/result13"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result29"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/result14"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result30"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#F0F0F0"
+                >
+
+                <TextView
+                    android:id="@+id/result15"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result31"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/result16"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+                <TextView
+                    android:id="@+id/result32"
+                    android:layout_width="1dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="#000"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/tableview_textview_container"
+                    android:layout_height="match_parent"
+                    android:ellipsize="end"
+                    android:singleLine="true" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?attr/colorPrimary"
+            android:textColor="#FFF"
+            android:textSize="25dp"
+            android:text="ค้นหาใหม่" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
