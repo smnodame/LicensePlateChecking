@@ -13,29 +13,18 @@ import java.util.ArrayList;
  */
 
 public class Detail extends AppCompatActivity {
-    TextView company;
-    TextView color;
-    TextView brand;
+    TextView description;
     Button back;
+    DBHelper mHelper;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail);
-        company = (TextView)findViewById(R.id.company);
-        brand = (TextView)findViewById(R.id.brand);
-        color = (TextView)findViewById(R.id.color);
-        final Car detail = (Car) getIntent().getSerializableExtra("detail");
-        setTitle("รายละเอียด " + detail.charactor + "-" + detail.id + "-" + detail.city);
-        if(detail.company != "") {
-            company.setText(detail.company);
-        }
-
-        if(detail.brand != "") {
-            brand.setText(detail.brand);
-        }
-
-        if(detail.color != "") {
-            color.setText(detail.color);
-        }
+        description = (TextView)findViewById(R.id.description);
+        final String id = (String) getIntent().getSerializableExtra("id");
+        final String query = (String) getIntent().getSerializableExtra("query");
+        mHelper = new DBHelper(this);
+        description.setText(mHelper.getDetail(id, query));
+        setTitle("รายละเอียด " + id);
 
         back = (Button)findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {

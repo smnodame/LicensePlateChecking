@@ -54,11 +54,13 @@ public class MainActivity extends AppCompatActivity {
     Button number9;
     Button number0;
     EditText query;
+    DBHelper mHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        mHelper = new DBHelper(this);
         search = (Button)findViewById(R.id.action_search);
         container = (LinearLayout)findViewById(R.id.container);
         remove = (Button)findViewById(R.id.action_remove);
@@ -77,15 +79,13 @@ public class MainActivity extends AppCompatActivity {
         search.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 try {
-                    ArrayList<Car> searchResult = readExcelFile(MainActivity.this, "1ธนชาติ.xls", query.getText().toString());
-                    if (searchResult.size() != 0) {
+//                    ArrayList<Car> searchResult = readExcelFile(MainActivity.this, "1ธนชาติ.xls", query.getText().toString());
 
-                        Intent i = new Intent(MainActivity.this, SearchResults.class);
-                        i.putExtra("searchResult", searchResult);
-                        startActivity(i);
-                    } else {
-                        Toast.makeText(MainActivity.this, "ไม่พบข้อมูล", Toast.LENGTH_LONG).show();
-                    }
+                    Intent i = new Intent(MainActivity.this, SearchResults.class);
+                    i.putExtra("query", query.getText().toString());
+                    startActivity(i);
+
+
                 } catch (Exception e){
                     Toast.makeText(MainActivity.this, "Error : "+e.getMessage(), Toast.LENGTH_LONG).show();
                     e.printStackTrace();

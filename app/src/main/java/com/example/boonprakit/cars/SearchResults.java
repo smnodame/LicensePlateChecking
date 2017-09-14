@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by boonprakit on 3/9/2560.
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 
 public class SearchResults extends AppCompatActivity {
     Button back;
+    DBHelper mHelper;
     TextView result1, result2, result3, result4, result5, result6, result7, result8, result9,
             result10, result11, result12, result13, result14, result15, result16, result17, result18 ,
             result19, result20, result21, result22, result23, result24, result25, result26, result27,
@@ -25,8 +27,10 @@ public class SearchResults extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_results);
-        final ArrayList<Car> searchResult = (ArrayList<Car>) getIntent().getSerializableExtra("searchResult");
-        setTitle("ผลการค้นหา " + searchResult.size() + " เร็คคอร์ด");
+        final String query = (String) getIntent().getSerializableExtra("query");
+        mHelper = new DBHelper(this);
+        final List<String> IDs =  mHelper.getListID(query);
+        setTitle("ผลการค้นหา " + IDs.size() + " เร็คคอร์ด");
 
         result1 = (TextView)findViewById(R.id.result1);
         result2 = (TextView)findViewById(R.id.result2);
@@ -66,7 +70,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result1.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(0));
+                    i.putExtra("id", IDs.get(0));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -76,7 +81,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result2.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(1));
+                    i.putExtra("id", IDs.get(1));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -86,7 +92,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result3.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(2));
+                    i.putExtra("id", IDs.get(2));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -96,7 +103,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result4.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(3));
+                    i.putExtra("id", IDs.get(3));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -106,7 +114,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result5.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(4));
+                    i.putExtra("id", IDs.get(4));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -116,7 +125,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result6.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(5));
+                    i.putExtra("id", IDs.get(5));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -126,7 +136,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result7.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(6));
+                    i.putExtra("id", IDs.get(6));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -136,7 +147,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result8.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(7));
+                    i.putExtra("id", IDs.get(7));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -146,7 +158,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result9.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(8));
+                    i.putExtra("id", IDs.get(8));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -156,7 +169,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result10.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(9));
+                    i.putExtra("id", IDs.get(9));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -166,7 +180,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result11.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(10));
+                    i.putExtra("id", IDs.get(10));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -176,7 +191,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result12.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(11));
+                    i.putExtra("id", IDs.get(11));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -186,7 +202,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result13.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(12));
+                    i.putExtra("id", IDs.get(12));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -196,7 +213,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result14.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(13));
+                    i.putExtra("id", IDs.get(13));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -206,7 +224,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result15.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(14));
+                    i.putExtra("id", IDs.get(14));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -216,7 +235,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result16.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(15));
+                    i.putExtra("id", IDs.get(15));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -226,7 +246,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result17.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(16));
+                    i.putExtra("id", IDs.get(16));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -236,7 +257,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result18.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(17));
+                    i.putExtra("id", IDs.get(17));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -246,7 +268,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result19.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(18));
+                    i.putExtra("id", IDs.get(18));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -256,7 +279,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result20.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(19));
+                    i.putExtra("id", IDs.get(19));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -266,7 +290,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result21.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(20));
+                    i.putExtra("id", IDs.get(20));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -276,7 +301,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result22.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(21));
+                    i.putExtra("id", IDs.get(21));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -286,7 +312,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result23.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(22));
+                    i.putExtra("id", IDs.get(22));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -296,7 +323,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result24.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(23));
+                    i.putExtra("id", IDs.get(23));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -306,7 +334,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result25.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(24));
+                    i.putExtra("id", IDs.get(24));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -316,7 +345,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result26.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(25));
+                    i.putExtra("id", IDs.get(25));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -326,7 +356,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result27.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(26));
+                    i.putExtra("id", IDs.get(26));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -336,7 +367,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result28.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(27));
+                    i.putExtra("id", IDs.get(27));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -346,7 +378,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result29.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(28));
+                    i.putExtra("id", IDs.get(28));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -356,7 +389,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result30.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(29));
+                    i.putExtra("id", IDs.get(29));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -366,7 +400,8 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result31.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(30));
+                    i.putExtra("id", IDs.get(30));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
@@ -376,84 +411,80 @@ public class SearchResults extends AppCompatActivity {
             public void onClick(View v) {
                 if(result32.getText() != "") {
                     Intent i = new Intent(SearchResults.this, Detail.class);
-                    i.putExtra("detail", searchResult.get(31));
+                    i.putExtra("id", IDs.get(31));
+                    i.putExtra("query", query);
                     startActivity(i);
                 }
             }
         });
 
-        for(int i=0;i<searchResult.size();i++){
+        for(int i=0;i<IDs.size();i++){
             // print member of our arraylist one by one
-            String company = searchResult.get(i).company;
-            String brand = searchResult.get(i).brand;
-            String color = searchResult.get(i).color;
-            String city = searchResult.get(i).city;
-            String charactor = searchResult.get(i).charactor;
-            String id = searchResult.get(i).id;
+            String id = IDs.get(i);
             if(i==0)
-                result1.setText(charactor + "-" + id + "-" + city);
+                result1.setText(id);
             else if(i==1)
-                result2.setText(charactor + "-" + id + "-" + city);
+                result2.setText(id);
             else if(i==2)
-                result3.setText(charactor + "-" + id + "-" + city);
+                result3.setText(id);
             else if(i==3)
-                result4.setText(charactor + "-" + id + "-" + city);
+                result4.setText(id);
             else if(i==4)
-                result5.setText(charactor + "-" + id + "-" + city);
+                result5.setText(id);
             else if(i==5)
-                result6.setText(charactor + "-" + id + "-" + city);
+                result6.setText(id);
             else if(i==6)
-                result7.setText(charactor + "-" + id + "-" + city);
+                result7.setText(id);
             else if(i==7)
-                result8.setText(charactor + "-" + id + "-" + city);
+                result8.setText(id);
             else if(i==8)
-                result9.setText(charactor + "-" + id + "-" + city);
+                result9.setText(id);
             else if(i==9)
-                result10.setText(charactor + "-" + id + "-" + city);
+                result10.setText(id);
             else if(i==10)
-                result11.setText(charactor + "-" + id + "-" + city);
+                result11.setText(id);
             else if(i==11)
-                result12.setText(charactor + "-" + id + "-" + city);
+                result12.setText(id);
             else if(i==12)
-                result13.setText(charactor + "-" + id + "-" + city);
+                result13.setText(id);
             else if(i==13)
-                result14.setText(charactor + "-" + id + "-" + city);
+                result14.setText(id);
             else if(i==14)
-                result15.setText(charactor + "-" + id + "-" + city);
+                result15.setText(id);
             else if(i==15)
-                result16.setText(charactor + "-" + id + "-" + city);
+                result16.setText(id);
             else if(i==16)
-                result17.setText(charactor + "-" + id + "-" + city);
+                result17.setText(id);
             else if(i==17)
-                result18.setText(charactor + "-" + id + "-" + city);
+                result18.setText(id);
             else if(i==18)
-                result19.setText(charactor + "-" + id + "-" + city);
+                result19.setText(id);
             else if(i==19)
-                result20.setText(charactor + "-" + id + "-" + city);
+                result20.setText(id);
             else if(i==20)
-                result21.setText(charactor + "-" + id + "-" + city);
+                result21.setText(id);
             else if(i==21)
-                result22.setText(charactor + "-" + id + "-" + city);
+                result22.setText(id);
             else if(i==22)
-                result23.setText(charactor + "-" + id + "-" + city);
+                result23.setText(id);
             else if(i==23)
-                result24.setText(charactor + "-" + id + "-" + city);
+                result24.setText(id);
             else if(i==24)
-                result25.setText(charactor + "-" + id + "-" + city);
+                result25.setText(id);
             else if(i==25)
-                result26.setText(charactor + "-" + id + "-" + city);
+                result26.setText(id);
             else if(i==26)
-                result27.setText(charactor + "-" + id + "-" + city);
+                result27.setText(id);
             else if(i==27)
-                result28.setText(charactor + "-" + id + "-" + city);
+                result28.setText(id);
             else if(i==28)
-                result29.setText(charactor + "-" + id + "-" + city);
+                result29.setText(id);
             else if(i==29)
-                result30.setText(charactor + "-" + id + "-" + city);
+                result30.setText(id);
             else if(i==30)
-                result31.setText(charactor + "-" + id + "-" + city);
+                result31.setText(id);
             else if(i==31)
-                result32.setText(charactor + "-" + id + "-" + city);
+                result32.setText(id);
         }
         back = (Button)findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
