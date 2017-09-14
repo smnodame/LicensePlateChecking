@@ -30,6 +30,7 @@ public class SearchResults extends AppCompatActivity {
         final String query = (String) getIntent().getSerializableExtra("query");
         mHelper = new DBHelper(this);
         final List<String> IDs =  mHelper.getListID(query);
+
         setTitle("ผลการค้นหา " + IDs.size() + " เร็คคอร์ด");
 
         result1 = (TextView)findViewById(R.id.result1);

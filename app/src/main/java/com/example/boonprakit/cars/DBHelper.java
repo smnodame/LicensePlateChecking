@@ -16,7 +16,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 /**
  * Created by boonprakit on 10/9/2560.
  */
@@ -28,12 +27,12 @@ public class DBHelper extends SQLiteOpenHelper {
     private SQLiteDatabase sqLiteDatabase;
 
     public DBHelper(Context context) {
-        super(context, Environment.getExternalStorageDirectory().toString() + File.separator +"DemoT.db", null, 1);
+        super(context, Environment.getExternalStorageDirectory().toString() + File.separator +"DemoT.db", null, SQLiteDatabase.NO_LOCALIZED_COLLATORS);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        Log.d("debug", "on created");
     }
 
     @Override
@@ -44,7 +43,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public List<String> getListID(String number) {
         List<String> IDs = new ArrayList<String>();
 
-        sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase = this.getReadableDatabase();
         String table = "";
         if(number.length() == 1)
         {
@@ -75,7 +74,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public String getDetail(String id, String number) {
-        sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase = this.getReadableDatabase();
         String table = "";
         if(number.length() == 1)
         {
